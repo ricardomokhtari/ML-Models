@@ -2,9 +2,25 @@
 This Repo contains various machine learning models and data preprocessing scripts that can be easily applied to a wide range of datasets.
 
 Models include:
-### Regression (Simple, Multiple, Polynomial, SVR, Decision Tree, Random Forest)
-### Classification (Logistic Regression, K-NN, SVM, Naive Bayes, Decision Tree, Random Forest)
-### Deep Learning in Keras (Artificial Neural Network, Convolutional Neural Network)
+### Regression 
+* Simple
+* Multiple
+* Polynomial
+* SVR 
+* Decision Tree
+* Random Forest
+
+### Classification 
+* Logistic Regression
+* K-NN
+* SVM
+* Naive Bayes
+* Decision Tree
+* Random Forest
+
+### Deep Learning in Keras 
+* Artificial Neural Network
+* Convolutional Neural Network
 
 More models to come as I do more of the course lol
 
