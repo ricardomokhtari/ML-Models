@@ -18,6 +18,10 @@ Models include:
 * Decision Tree
 * Random Forest
 
+### Reinforcement Learning
+* Upper Confidence Bound
+* Thompson Sampling
+
 ### Deep Learning in Keras 
 * Artificial Neural Network
 * Convolutional Neural Network
