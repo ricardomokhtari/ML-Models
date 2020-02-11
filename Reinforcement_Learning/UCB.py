@@ -58,9 +58,11 @@ for n in range(N):
             
     ads_selected.append(ad) # append selected ad
     numbers_of_selections[ad] += 1 # increment number of selections for this ad
-    reward = dataset.values[n, ad]
-    sums_of_reward[ad] += reward
-    total_reward += reward
+    reward = dataset.values[n, ad] # check the corresponding ad in the original dataset
+                                   # if the chosen ad was correct then reward is 1
+                                   # if it was incorrect the reward is 0
+    sums_of_reward[ad] += reward   # add reward to corresponding ad in array 
+    total_reward += reward         # keep track of the total reward 
 
 # visualise results
 plt.hist(ads_selected)
