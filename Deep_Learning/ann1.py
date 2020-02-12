@@ -1,9 +1,14 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Mon Feb 10 16:20:40 2020
 
-@author: Ricardo
+This script is an implementation of an Artificial Neural Network (non convolutional).
+
+Dataset used here was bank data - 10 independent variables, dependent variable is whether
+or not the customer leaves the bank (1 if leave, 0 if stay)
+
+2 of the independent variables are categorical so need to be independently one hot encoded
+
+Test set accuracy: 86%
+
 """
 
 # Data preprocessing
@@ -28,7 +33,6 @@ onehotencoder = OneHotEncoder(categorical_features = [1])
 X = onehotencoder.fit_transform(X).toarray()
 
 X = X[:, 1:]
-
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
