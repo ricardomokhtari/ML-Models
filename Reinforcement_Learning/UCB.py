@@ -1,9 +1,20 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Tue Feb 11 12:01:15 2020
 
-@author: Ricardo
+This script is an implementation of the Upper Confidence Bound reinforcement learning
+algorithm.
+
+The dataset used here is a variation of the multi armed bandit problem:
+    - We have 10 different ads that we want to show to people
+    - We don't know beforehand which ad is going to result in the most clicks
+    - We implement the UCB algorithm to find out
+    - In the real world this is done as data is being gathered but in this situation
+    we are not able to gather data on the fly so instead we have a pre made dataset
+    (which you would not have in real life)
+    - The dataset shows which ads were clicked by each user in each round (1 is clicked
+    and 0 is not clicked)
+    - We step through this data in our algorithm to simulate how this would be done in
+    real life
+
 """
 
 import numpy as np
@@ -58,10 +69,13 @@ for n in range(N):
             
     ads_selected.append(ad) # append selected ad
     numbers_of_selections[ad] += 1 # increment number of selections for this ad
+    
     reward = dataset.values[n, ad] # check the corresponding ad in the original dataset
                                    # if the chosen ad was correct then reward is 1
                                    # if it was incorrect the reward is 0
+                                   
     sums_of_reward[ad] += reward   # add reward to corresponding ad in array 
+    
     total_reward += reward         # keep track of the total reward 
 
 # visualise results
