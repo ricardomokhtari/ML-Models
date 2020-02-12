@@ -1,12 +1,11 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Feb  4 23:12:26 2020
-
-@author: Ricardo
 """
 
-# CNN code
+This script is an implementation of a Convolutional Neural Network with 
+2 hidden layers. More layers can be easily added.
+
+This network was written for cat/dog classification, data preprocessing not included here.
+
+"""
 
 
 from keras.models import Sequential
@@ -17,7 +16,6 @@ from keras.layers import Dense
 from keras.preprocessing.image import ImageDataGenerator
 
 # initialise the CNN
-
 classifier = Sequential()
 
 # Convolution
@@ -50,18 +48,22 @@ train_datagen = ImageDataGenerator(
         zoom_range=0.2,
         horizontal_flip=True)
 
+# basic data augmentation
 test_datagen = ImageDataGenerator(rescale=1./255)
 
+# define the training set
 training_set = train_datagen.flow_from_directory('dataset/training_set',
                                                 target_size=(64, 64),
                                                 batch_size=32,
                                                 class_mode='binary')
 
+# define the test set
 test_set = test_datagen.flow_from_directory('dataset/test_set',
                                             target_size=(64, 64),
                                             batch_size=32,
                                             class_mode='binary')
 
+# train the CNN
 classifier.fit_generator(training_set,
                         steps_per_epoch=8000,
                         epochs=25,
