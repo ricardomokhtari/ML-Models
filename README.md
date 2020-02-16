@@ -18,6 +18,9 @@ Models include:
 * Decision Tree
 * Random Forest
 
+### Natural Language Processing
+* Bag of words model + Random Forest Regression
+
 ### Reinforcement Learning
 * Upper Confidence Bound
 * Thompson Sampling
