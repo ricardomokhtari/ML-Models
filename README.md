@@ -1,5 +1,5 @@
 # ML-Models
-This Repo contains various machine learning models and data preprocessing scripts that can be easily applied to a wide range of datasets.
+This repo contains various machine learning models and data preprocessing scripts that can be easily applied to a wide range of datasets.
 
 Models include:
 ### Regression 
@@ -29,7 +29,7 @@ Models include:
 * Artificial Neural Network
 * Convolutional Neural Network
 
-I wrote these scripts with the help of the Machine Learning A-Z course on Udemy.
+I wrote these scripts with the help of the "Machine Learning A-Z" course on Udemy.
 
 [Link to Udemy course](https://www.udemy.com/course/machinelearning/)
 
