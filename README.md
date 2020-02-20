@@ -18,6 +18,9 @@ Models include:
 * Decision Tree
 * Random Forest
 
+### Association Rule Learning
+* Apriori
+
 ### Natural Language Processing
 * Bag of words model + Random Forest Regression
 
