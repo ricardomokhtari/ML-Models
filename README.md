@@ -18,6 +18,9 @@ Models include:
 * Decision Tree
 * Random Forest
 
+### Clustering 
+* K-Means Clustering
+
 ### Association Rule Learning
 * Apriori
 
