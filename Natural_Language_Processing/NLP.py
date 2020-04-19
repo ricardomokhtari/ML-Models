@@ -71,8 +71,15 @@ from sklearn.ensemble import RandomForestClassifier
 classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
 classifier.fit(X_train, y_train)
 
+sentiment = []
+
+ori_sentence = "i hate myself"
+sentiment.append(ori_sentence)
+sentence = cv.fit_transform(sentiment).toarray()
+
 # predicting the test set results
 y_pred = classifier.predict(X_test)
+sentiment = classifier.predict(sentence)
 
 # making the confusion matrix
 from sklearn.metrics import confusion_matrix
