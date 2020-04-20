@@ -20,6 +20,7 @@ Models include:
 
 ### Clustering 
 * K-Means Clustering
+* Hierarchical Clustering
 
 ### Association Rule Learning
 * Apriori
