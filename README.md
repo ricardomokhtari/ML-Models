@@ -36,6 +36,9 @@ Models include:
 * Artificial Neural Network
 * Convolutional Neural Network
 
+### Dimensionality Reduction
+* PCA
+
 I wrote these scripts with the help of the "Machine Learning A-Z" course on Udemy.
 
 [Link to Udemy course](https://www.udemy.com/course/machinelearning/)
