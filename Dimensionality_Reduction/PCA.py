@@ -1,3 +1,14 @@
+"""
+
+PCA applied to dataset originally containing 13 independent varibales
+
+Independent variables reduced from 13 to 2
+Logistic regression applied on 2 extracted principle components
+
+Accuracy: 97%
+
+"""
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
