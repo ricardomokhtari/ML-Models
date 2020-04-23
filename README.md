@@ -42,5 +42,3 @@ Models include:
 I wrote these scripts with the help of the "Machine Learning A-Z" course on Udemy.
 
 [Link to Udemy course](https://www.udemy.com/course/machinelearning/)
-
-More models to come as I do more of the course lol
