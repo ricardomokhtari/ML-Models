@@ -1,11 +1,10 @@
 """
 
-PCA applied to dataset originally containing 13 independent varibales
+LDA applied to dataset originally containing 13 independent varibales
 
-Independent variables reduced from 13 to 2
-Logistic regression applied on 2 extracted principle components
+2 linear discriminants extracted and logistic regression applied 
 
-Accuracy: 97%
+Accuracy: 100% (classes are perfectly separable)
 
 """
 
@@ -25,15 +24,14 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, rando
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
-X_train = sc.fit_transform(X_train) # PCA is unsupervised so we only consider X_train
+X_train = sc.fit_transform(X_train, y_train) # LDA is supervised so we need to include y_train
 X_test = sc.transform(X_test)
 
-# apply PCA to training set
-from sklearn.decomposition import PCA
-pca = PCA(n_components=2)
-X_train = pca.fit_transform(X_train)
-X_test = pca.transform(X_test)
-explained_variance = pca.explained_variance_ratio_
+# apply LDA to training set
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+lda = LDA(n_components=2)
+X_train = lda.fit_transform(X_train)
+X_test = lda.transform(X_test)
 
 # Fitting Logistic Regression to the Training set
 from sklearn.linear_model import LogisticRegression
@@ -78,7 +76,7 @@ for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green', 'blue'))(i), label = j)
 plt.title('Logistic Regression (Test set)')
-plt.xlabel('PC 1')
-plt.ylabel('PC 2')
+plt.xlabel('LD 1')
+plt.ylabel('LD 2')
 plt.legend()
 plt.show()
