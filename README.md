@@ -38,6 +38,12 @@ Models include:
 
 ### Dimensionality Reduction
 * PCA
+* Linear Discriminant Analysis
+* Kernel PCA
+
+### Model Selection & Boosting
+* k-fold Cross Validation + Grid Search
+* XGBoost
 
 I wrote these scripts with the help of the "Machine Learning A-Z" course on Udemy.
 
