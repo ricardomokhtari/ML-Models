@@ -30,6 +30,29 @@ y_pred = classifier.predict(X_test)
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
+# applying k-fold cross validation
+from sklearn.model_selection import cross_val_score
+accuracies = cross_val_score(estimator=classifier, X=X_train, y=y_train, cv=10)
+# compute the average accuracy and SD across 10 folds
+avg = accuracies.mean()
+std = accuracies.std()
+
+# applying grid search to find the best model and parameters
+from sklearn.model_selection import GridSearchCV
+parameters = [
+        {'C': [1,10,100,1000], 'kernel': ['linear']}, 
+        {'C': [1,10,100,1000], 'kernel': ['rbf'], 'gamma': [0.5,0.1,0.01,0.001,0.0001]}
+        ]
+
+grid_search = GridSearchCV(estimator=classifier,
+                           param_grid=parameters, 
+                           scoring='accuracy', 
+                           cv=10)
+
+grid_search = grid_search.fit(X_train, y_train)
+best_accuracy = grid_search.best_score_
+best_parameters = grid_search.best_params_
+
 # visualising the training set results
 from matplotlib.colors import ListedColormap
 X_set, y_set = X_train, y_train
