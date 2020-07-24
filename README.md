@@ -45,6 +45,12 @@ Models include:
 * k-fold Cross Validation + Grid Search
 * XGBoost
 
+### Generative Adversarial Networks
+* Pix2Pix
+* cGAN (PyTorch & TensorFlow)
+* vanilla GAN
+* DCGAN
+
 I wrote these scripts with the help of the "Machine Learning A-Z" course on Udemy.
 
 [Link to Udemy course](https://www.udemy.com/course/machinelearning/)
